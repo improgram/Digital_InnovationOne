@@ -157,3 +157,28 @@ body {
         border: 1px solid transparent;
     }
 }
+
+a:link {
+    color: #d4d4e0;
+}
+  
+  
+  
+a:hover {
+    color: #960017;
+}
+  
+
+.footer {
+    position: fixed;
+    color: silver;
+    bottom: 0;
+    text-align: center;
+    padding-bottom: 1%;
+    line-height: 20px;
+    width: 640px;
+}
+
+.footer a:visited {
+    color: rgb(141, 138, 138);
+}    
