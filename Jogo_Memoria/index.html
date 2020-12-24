@@ -6,8 +6,14 @@
     <link rel="stylesheet" href="./style.css">
     <title>Jogo da memória</title>
 </head>
+
 <body>
+
     <main class="memory-game">
+        <header>
+            <input type='button' class="button" onclick="reloadPage()" value="Reiniciar Jogo da Memoria" />
+            Contagem de Tentativas: <span id="contagem"> </span>
+        </header>
         <div class="card" data-card="bowser">
             <img class="card-front" src="./img/bowser.jpg" alt="Face da carta">
             <img class="card-back" src="./img/box.png" alt="Verso da carta">
@@ -56,7 +62,9 @@
             <img class="card-front" src="./img/yoshi.png" alt="Face da carta">
             <img class="card-back" src="./img/box.png" alt="Verso da carta">
         </div>
+        
     </main>
+    
     <script src="./script.js"></script>
 </body>
 </html>

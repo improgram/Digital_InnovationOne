@@ -7,7 +7,7 @@ let lockBoard = false;
 function flipCard() {
     if(lockBoard) return;
     if(this === firstCard) return;
-
+    console.log('Clicou.')
     this.classList.add('flip');
     if(!hasFlippedCard) {
         hasFlippedCard = true;
@@ -20,13 +20,21 @@ function flipCard() {
     checkForMatch();
 }
 
+//Quantidade de cliques
+let count = 0 ;
+
 //função que checa se as cartas são iguais
 function checkForMatch() {
+    count ++;
+    console.log('Tentativas: ' + count);
+    document.getElementById("contagem").textContent = count;
+
     if(firstCard.dataset.card === secondCard.dataset.card) {
         disableCards();
+        console.log('ACERTOU.')
         return;
     }
-
+    console.log('ERROU.')
     unflipCards();
 }
 
@@ -34,7 +42,7 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
+    
     resetBoard();
 }
 
@@ -47,7 +55,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 1500);
+    }, 1400);
 }
 
 //função que reseta o tabuleiro
@@ -62,9 +70,14 @@ function resetBoard() {
         let ramdomPosition = Math.floor(Math.random() * 12);
         card.style.order = ramdomPosition;
     })
-})();
+})();//funcao automaticamente invocada
 
 //adiciona evento de clique na carta
 cards.forEach((card) => {
     card.addEventListener('click', flipCard)
 });
+
+//Refresh na pagina
+function reloadPage() {
+    window.location.reload();
+}

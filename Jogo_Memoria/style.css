@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     background-color: rgb(188, 248, 228);
 }
@@ -17,6 +17,20 @@ body {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px; /* perspectiva do usuario no eixo z, quanto maior, maior o efeito da perspectiva */
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+    background: aqua;
+    border: 1px solid rgba(27, 48, 36, 0.404);
+}
+
+.button {
+    font-size: 16px;
+    font-family: Gill Sans, Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card {
